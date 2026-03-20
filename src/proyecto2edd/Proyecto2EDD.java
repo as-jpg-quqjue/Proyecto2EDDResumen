@@ -6,8 +6,14 @@ package proyecto2edd;
 
 import clases.Impresion;
 import clases.Usuario;
+import interfaz.InterfazGrafica;
+import javax.swing.JFrame;
 import primitivas.HashTable;
 import primitivas.MonticuloBinario;
+import org.graphstream.graph.*;
+import org.graphstream.graph.implementations.*;
+import org.graphstream.ui.view.Viewer;
+import org.graphstream.ui.spriteManager.*;
 
 
 /**
@@ -25,7 +31,10 @@ public class Proyecto2EDD {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-
+        System.setProperty("org.graphstream.ui", "swing");
+        java.awt.EventQueue.invokeLater(() -> {
+        new InterfazGrafica().setVisible(true);
+    });
         
         
     }
